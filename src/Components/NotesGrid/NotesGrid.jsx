@@ -3,7 +3,6 @@ import Note from "../Note/Note";
 import "./NotesGrid.css";
 
 const NotesGrid = (props) => {
-  console.log(props);
   return (
     <div className="notes">
       {props.notes.map((note, index) => {
