@@ -1,0 +1,44 @@
+.navbar {
+  width: 100%;
+  height: 7rem;
+  background-color: var(--acc-3);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.nav-body {
+  margin: auto;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.25rem;
+  font-family: 'Syne', sans-serif;
+}
+.btn {
+  letter-spacing: 0.1rem;
+  color: var(--acc-1);
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: var(--acc-2);
+  transition: all 250ms ease-in-out;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #ffc3c3;
+}
+
+@media screen and (max-width: 425px) {
+  .navbar {
+    height: 5rem;
+  }
+  .header {
+    font-size: 2.5rem;
+  }
+}
