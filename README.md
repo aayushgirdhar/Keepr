@@ -1,7 +1,7 @@
 # Keepr
 Keepr is a minimalistic note-taking application built with ReactJS.
 
-Keepr is a minimalistic note-taking application built with ReactJS. It provides an intuitive and user-friendly interface for creating, organizing, and managing notes. 
+It provides an intuitive and user-friendly interface for creating, organizing, and managing notes. 
 
 Users can easily add new notes and delete notes they no longer need. The app utilizes React's component-based architecture, state management, and hooks for efficient and responsive user interactions.
 
