@@ -18,21 +18,6 @@
   letter-spacing: 0.25rem;
   font-family: 'Syne', sans-serif;
 }
-.btn {
-  letter-spacing: 0.1rem;
-  color: var(--acc-1);
-  margin: 0.5rem;
-  padding: 0.5rem;
-  width: 7rem;
-  height: 3rem;
-  border-radius: 10px;
-  background-color: var(--acc-2);
-  transition: all 250ms ease-in-out;
-}
-.btn:hover {
-  cursor: pointer;
-  background-color: #ffc3c3;
-}
 
 @media screen and (max-width: 425px) {
   .navbar {
