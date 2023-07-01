@@ -9,3 +9,4 @@ Keepr also leverages local storage to persist user notes across sessions. Whethe
 
 Start capturing and managing your ideas effortlessly with Keepr!
 
+Go check it out - www.keeprapp.netlify.app
