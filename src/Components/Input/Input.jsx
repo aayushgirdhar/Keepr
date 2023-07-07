@@ -2,6 +2,20 @@ import { useState, useEffect, useCallback } from "react";
 import NotesGrid from "../NotesGrid/NotesGrid";
 import "./Input.css";
 const Input = () => {
+  const monthInitials = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   const [notes, setNotes] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -24,8 +38,18 @@ const Input = () => {
     const newNote = Object.fromEntries(formData);
 
     setNotes((currentNotes) => {
-      const date = new Date().toLocaleDateString();
-      const finalNote = { ...newNote, date };
+      const today = new Date();
+      const date = today.getDate().toString();
+      const month = monthInitials[today.getMonth()];
+      const hours = today.getHours().toString();
+      const mins = today.getMinutes().toString();
+
+      const dateTime = {
+        month: date + " " + month,
+        time: hours + ':' + mins,
+      }
+
+      const finalNote = { ...newNote, dateTime };
       return [...currentNotes, finalNote];
     });
     e.currentTarget.reset();

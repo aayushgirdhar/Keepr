@@ -19,14 +19,14 @@
 .note-content {
   margin-top: 1rem;
 }
-.note-btn {
+.note-footer {
   opacity: 0;
 }
-.note:hover .note-btn {
+.note:hover .note-footer {
   transition: opacity 150ms ease-in-out;
 }
 
-.note:hover .note-btn {
+.note:hover .note-footer {
   opacity: 1;
 }
 .note-footer,
@@ -37,6 +37,11 @@
 }
 .note-footer {
   margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+.month-span {
+  margin-right: 0.8rem;
 }
 .note-icon {
   width: 20px;

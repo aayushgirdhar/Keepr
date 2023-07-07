@@ -9,7 +9,10 @@ const Note = ({ note, dlt }) => {
         <p className="note-content">{note.note}</p>
       </div>
       <div className="note-footer">
-        <p>{note.date}</p>
+        <div className="date-time">
+          <span className="month-span" >{note.dateTime.month}</span>
+          <span>{note.dateTime.time}</span>
+        </div>
         <button className="note-btn" onClick={dlt}>
           <img src={delete_icon} className="note-icon" />
         </button>
