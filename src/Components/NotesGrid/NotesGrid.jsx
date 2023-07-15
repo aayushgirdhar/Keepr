@@ -6,7 +6,7 @@ const NotesGrid = (props) => {
   return (
     <div className="notes">
       {props.notes.map((note, index) => {
-        return <Note key={index} note={note} dlt={() => props.delete(index)} />;
+        return <Note key={index} note={note} dlt={() => props.delete(index)} edit = {()=>props.edit(index)}/>;
       })}
     </div>
   );

@@ -1,5 +1,4 @@
 .note {
-  margin: auto;
   background-color: #ffffff80;
   border-radius: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -44,11 +43,16 @@
   margin-right: 0.8rem;
 }
 .note-icon {
-  width: 20px;
+  width: 17px;
+  background: transparent;
 }
 .note-btn {
   background: transparent;
   cursor: pointer;
+}
+.note-edit {
+  width: 20px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 320px) {
