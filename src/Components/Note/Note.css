@@ -38,21 +38,18 @@
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #888;
-}
-.month-span {
-  margin-right: 0.8rem;
-}
-.note-icon {
-  width: 17px;
-  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .note-btn {
+  color: var(--acc-3);
   background: transparent;
   cursor: pointer;
 }
-.note-edit {
-  width: 20px;
-  margin-right: 10px;
+.right {
+  display: flex;
+  gap: 0.5rem;
 }
 
 @media screen and (max-width: 320px) {

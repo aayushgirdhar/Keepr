@@ -1,14 +1,17 @@
-import { memo } from "react"
+/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import Note from "../Note/Note";
 import "./NotesGrid.css";
+import { UserContext } from "../../context/UserContext";
 
-const NotesGrid = (props) => {
+const NotesGrid = () => {
+  const { user } = useContext(UserContext);
   return (
     <div className="notes">
-      {props.notes.map((note, index) => {
-        return <Note key={index} note={note} dlt={() => props.delete(index)} edit = {()=>props.edit(index)}/>;
+      {user.notes.map((note) => {
+        return <Note key={note.id} note={note} />;
       })}
     </div>
   );
 };
-export default memo(NotesGrid);
+export default NotesGrid;
