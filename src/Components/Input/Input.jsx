@@ -26,7 +26,7 @@ const Input = () => {
     };
     try {
       dispatch({ type: "ADD_NOTE", payload: note });
-      if (user.uid) {
+      if (user.uid !== "") {
         const userRef = doc(db, "users", user.uid);
         await updateDoc(userRef, {
           notes: arrayUnion(note),

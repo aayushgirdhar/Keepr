@@ -37,12 +37,13 @@ const Note = ({ note }) => {
         return n;
       }
     });
-    console.log(updatedNotes);
+    if (user.uid !== "") {
+      const userRef = doc(db, "users", user.uid);
+      await updateDoc(userRef, {
+        notes: updatedNotes,
+      });
+    }
     dispatch({ type: "EDIT_NOTE", payload: updatedNotes });
-    const userRef = doc(db, "users", user.uid);
-    await updateDoc(userRef, {
-      notes: updatedNotes,
-    });
     setEdit(false);
   };
 
