@@ -65,7 +65,7 @@ const Login = () => {
 
       if (!userDoc.exists()) {
         const userData = {
-          id: user.uid,
+          uid: user.uid,
           name: user.displayName,
           email: user.email,
           img: user.photoURL,
