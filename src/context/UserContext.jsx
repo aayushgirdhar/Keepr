@@ -10,7 +10,6 @@ export const UserReducer = (state, action) => {
         user: action.payload,
       };
     case "ADD_NOTE": {
-      console.log("new note is added!");
       const updatedNotes = [...state.user.notes, action.payload];
       return {
         user: {
@@ -20,16 +19,10 @@ export const UserReducer = (state, action) => {
       };
     }
     case "EDIT_NOTE": {
-      const updatedNotes = state.user.notes.map((note) => {
-        if (note.id === action.payload.id) {
-          return { ...note, ...action.payload };
-        }
-        return note;
-      });
       return {
         user: {
           ...state.user,
-          notes: updatedNotes,
+          notes: action.payload,
         },
       };
     }

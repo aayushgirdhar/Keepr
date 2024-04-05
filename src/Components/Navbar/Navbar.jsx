@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-body">
         <h1 className="header">Keepr</h1>
+        <Login />
       </div>
-      <Login />
     </nav>
   );
 };

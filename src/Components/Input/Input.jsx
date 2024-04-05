@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { v4 as uuid } from "uuid";
-// import DoneIcon from "@mui/icons-material/Done";
 import AddIcon from "@mui/icons-material/Add";
 import { db } from "../../firebase";
 import { useContext } from "react";
@@ -13,10 +12,6 @@ const Input = () => {
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
-
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,15 +49,6 @@ const Input = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
       )}
-      {/* {!selectedNote && (
-        <textarea
-          onClick={() => setIsExpanded(true)}
-          name="note"
-          id="note"
-          rows="4"
-          placeholder="Take a note..."
-        />
-      )} */}
       <textarea
         onClick={() => setIsExpanded(true)}
         name="note"
@@ -73,7 +59,6 @@ const Input = () => {
         onChange={(e) => setText(e.target.value)}
       />
       <button type="submit" className="submit-btn">
-        {/* {selectedNote ? <DoneIcon /> : <AddIcon />} */}
         <AddIcon />
       </button>
     </form>
