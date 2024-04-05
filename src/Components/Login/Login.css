@@ -1,0 +1,50 @@
+.user-menu-container {
+  position: relative;
+}
+.user-img {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.user-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.575rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 3px solid var(--acc-2);
+  color: var(--acc-2);
+  background-color: var(--acc-3);
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+.user-login:hover {
+  color: var(--acc-3);
+  background-color: var(--acc-2);
+}
+.user-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: var(--acc-1);
+  background-color: var(--acc-2);
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 10rem;
+  bottom: -5.5rem;
+  right: -20px;
+  text-align: center;
+  padding: 10px 7px;
+}
+.user-logout {
+  margin-top: 1rem;
+  background: transparent;
+  cursor: pointer;
+}
+.user-logout:hover {
+  color: var(--acc-3);
+}
