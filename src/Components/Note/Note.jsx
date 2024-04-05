@@ -20,9 +20,9 @@ const Note = ({ note }) => {
 
   const handleDelete = async (note) => {
     dispatch({ type: "DELETE_NOTE", payload: note.id });
-    if (user.id !== "") {
+    if (user.uid !== "") {
       // delete note from the database
-      const userRef = doc(db, "users", user.id);
+      const userRef = doc(db, "users", user.uid);
       await updateDoc(userRef, {
         notes: arrayRemove(note),
       });
@@ -39,7 +39,7 @@ const Note = ({ note }) => {
     });
     console.log(updatedNotes);
     dispatch({ type: "EDIT_NOTE", payload: updatedNotes });
-    const userRef = doc(db, "users", user.id);
+    const userRef = doc(db, "users", user.uid);
     await updateDoc(userRef, {
       notes: updatedNotes,
     });
