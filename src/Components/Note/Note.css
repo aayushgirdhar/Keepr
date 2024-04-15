@@ -14,9 +14,12 @@
   font-family: "Syne", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
+  padding: 0.25rem;
+  color: var(--neut-2);
 }
 .note-content {
   margin-top: 1rem;
+  padding: 0.25rem;
 }
 .note-footer {
   opacity: 0;
@@ -51,7 +54,12 @@
   display: flex;
   gap: 0.5rem;
 }
-
+.focus {
+  /* outline: none; */
+  outline: 2px solid var(--neut-1);
+  padding: 0.25rem;
+  border-radius: 5px;
+}
 @media screen and (max-width: 320px) {
   .note {
     width: 250px;

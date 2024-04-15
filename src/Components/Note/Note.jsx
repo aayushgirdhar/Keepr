@@ -56,12 +56,12 @@ const Note = ({ note }) => {
           onInput={(e) => {
             setTitle(e.currentTarget.textContent);
           }}
-          className="note-title"
+          className={`note-title ${isEdit && "focus"} `}
         >
           {note.title}
         </h2>
         <p
-          className="note-content"
+          className={`note-content ${isEdit && "focus"} `}
           contentEditable={isEdit}
           suppressContentEditableWarning={true}
           onInput={(e) => {
